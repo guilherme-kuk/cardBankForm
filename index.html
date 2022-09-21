@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="./public/favicon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardBank Form</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- scripts -->
+  <script src="./assets/scripts/scripts.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <section class="card_side">
+      <div class="cards">
+        <!-- CardFront -->
+        <div class="card_front">
+          <div class="card_logo">
+            <img src="./assets/img/card-logo.svg" alt="Card Logo">
+          </div>
+          <img src="./assets/img/bg-card-front.png" alt="Card Front">
+
+          <div class="card_info_front">
+            <div class="row">
+              <div class="card_info_number">
+                <p id="number_info">0000 0000 0000 0000</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card_info_name">
+                <p id="name_info">--</p>
+              </div>
+              <div class="card_info_date">
+                <p id="date_info">
+                  <span id="month_info">00</span>/<span id="year_info">00</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CardBack -->
+        <div class="card_back">
+          <img src="./assets/img/bg-card-back.png" alt="Card Back">
+
+          <div class="card_info_back">
+            <div class="card_cvv">
+              <p id="cvv_info">000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- form -->
+    <section class="form_side">
+      <form action="#" class="card_form">
+        <div class="cardholder_name">
+          <label for="name">nome impresso no cartão</label>
+          <input type="text" name="name" id="name" placeholder="ex: Guilherme Kuk" maxlength="24" required>
+          <span class="msg_error_name"></span>
+        </div>
+
+        <div class="card_number">
+          <label for="number">número do cartão</label>
+          <input type="text" name="number" id="number" placeholder="ex: 1234 5678 9123 0000" maxlength="19" required>
+          <span class="msg_error_number"></span>
+        </div>
+
+        <div class="card_date_cvv">
+          <div class="input_date">
+            <label for="month">validade (mm/yy)</label>
+            <div>
+              <input type="text" name="month" id="month" placeholder="MM" maxlength="2" required>
+              <input type="text" name="year" id="year" placeholder="YY" maxlength="2" required>
+            </div>
+            <span class="msg_error_date"></span>
+          </div>
+
+          <div class="input_cvv">
+            <label for="cvv">CVV</label>
+            <input type="text" name="cvv" id="cvv" placeholder="123" maxlength="3" required>
+            <span class="msg_error_cvv"></span>
+          </div>
+        </div>
+
+        <input type="button" value="Confirmar" id="btn">
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

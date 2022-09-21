@@ -1,0 +1,23 @@
+@import './scss/variables';
+
+// Components
+// cardside
+@import './scss/cardside';
+@import './scss/cardinfofront';
+@import './scss/cardinfoback';
+
+// formside
+@import './scss/formside';
+@import './scss/input';
+@import './scss/confirmbutton';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+main {
+    display: flex;
+}

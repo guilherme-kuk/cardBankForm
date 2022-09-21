@@ -1,0 +1,71 @@
+.card_form {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+
+  & label {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    width: auto;
+    color: $VeryDarkViolet;
+    cursor: text;
+  }
+
+  & input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid $LightGrayishViolet;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1.1em;
+    padding-left: 15px;
+    margin-top: 10px;
+  }
+
+  & div {
+    margin-bottom: 25px;
+  }
+
+  & .input_ok {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient($White, $White), $Linear-gradient;
+    background-clip: padding-box, border-box;
+  }
+
+  & .input_error {
+    border-color: $Input-errors;
+  }
+
+  & .msg_error {
+    color: $Input-errors;
+    margin-top: 5px;
+    font-size: 0.75em;
+    font-weight: 700;
+  }
+
+  & .card_date_cvv {
+    display: flex;
+    justify-content: space-between;
+
+    & .input_date {
+      width: 170px;
+
+      & div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+
+        & input {
+          width: 80px;
+        }
+      }
+    }
+
+    & .input_cvv {
+      width: 190px;
+    }
+  }
+}

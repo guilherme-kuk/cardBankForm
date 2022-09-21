@@ -1,0 +1,24 @@
+.card_info_front {
+  position: absolute;
+  color: $White;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  top: 140px;
+  left: 35px;
+  user-select: none;
+
+  & .row {
+    display: flex;
+    width: 100%;
+    min-width: 351px;
+    justify-content: space-between;
+
+    & .card_info_number {
+      margin-bottom: 30px;
+
+      & #number_info {
+        font-size: 1.8em;
+      }
+    }
+  }
+}
