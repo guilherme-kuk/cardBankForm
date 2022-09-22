@@ -18,20 +18,21 @@ let btnConfirmar = document.getElementById("btn");
 let msgErrorName = document.querySelector(".msg_error_name");
 let msgErrorNumber = document.querySelector(".msg_error_number");
 let msgErrorDate = document.querySelector(".msg_error_date");
+let msgErrorCvv = document.querySelector(".msg_error_cvv");
 
 //Event Listeners
 
 // cardholder name
 inputName.addEventListener("input", () => {
   cardName.innerHTML = inputName.value;
-  cardInfoDefault();
+  cardInfoDefaultOrOK();
 });
 
 // card number
 inputNumber.addEventListener("input", () => {
   cardNumber.innerHTML = inputNumber.value;
 
-  cardInfoDefault();
+  cardInfoDefaultOrOK();
   inputNumberValidate();
 });
 
@@ -52,11 +53,11 @@ inputCvv.addEventListener("input", () => {
   onlyNumbersInputValidate(inputCvv);
 
   cardCvv.innerHTML = inputCvv.value;
-  cardInfoDefault();
+  cardInfoDefaultOrOK();
 });
 
 // Retornar valor default no cartão caso estiver vazio no input.
-function cardInfoDefault() {
+function cardInfoDefaultOrOK() {
   const defaultValue = {
     cardNameDefault: "--",
     cardNumberDefault: "0000 0000 0000 0000",
@@ -101,6 +102,15 @@ function cardInfoDefault() {
     addInputOk(inputYear);
     removeInputError(inputYear, msgErrorDate);
   }
+
+  // Input CVV Default
+  if (inputCvv.value === "") {
+    cardCvv.innerHTML = defaultValue.cardCvvDefault;
+    removeInputOk(inputCvv);
+  } else {
+    addInputOk(inputCvv);
+    removeInputError(inputCvv, msgErrorCvv);
+  }
 }
 
 // Padrões de erro
@@ -112,11 +122,11 @@ const errorsMsgs = {
 
 // Adicionar 0 a frente no input mes e ano se inserir apenas 1 digito.
 
-// function inputsDateValidate(input) {
-//   if (input.value.length < 2) {
-//     input.value = "0" + input.value;
-//   }
-// }
+function inputsDateValidate(input) {
+  if (input.value.length < 2) {
+    input.value = "0" + input.value;
+  }
+}
 
 // Validar Input CardNumber
 function inputNumberValidate() {
@@ -144,13 +154,12 @@ function inputMonthValidate() {
   if (
     inputMonth.value > 12 ||
     inputMonth.value < 0 ||
-    inputMonth.value === "-" ||
     inputMonth.value === "00"
   ) {
     inputMonth.value = "";
   } else {
     cardMonth.innerHTML = inputMonth.value;
-    cardInfoDefault();
+    cardInfoDefaultOrOK();
   }
 }
 
@@ -159,12 +168,12 @@ function inputYearValidate() {
   // Verificando se o ano está dentro da validade.
   let ano = new Date().getFullYear().toString();
 
-  if (inputYear.value >= ano.substr(-2) || inputYear.value === "") {
-    removeInputError(inputYear, msgErrorDate);
+  if (inputYear.value >= ano.substr(-2)) {
     cardYear.innerHTML = inputYear.value;
-    cardInfoDefault();
+    cardInfoDefaultOrOK();
   } else if (inputYear.value.length < 2) {
     cardYear.innerHTML = inputYear.value;
+    cardInfoDefaultOrOK();
   } else {
     addInputError(inputYear, msgErrorDate);
     msgErrorDate.innerHTML = errorsMsgs.error3;
@@ -210,18 +219,16 @@ function onlyNumbersInputValidate(input) {
   }
 }
 
-btnConfirmar.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (
-    (inputMonth.value === "0" && inputMonth.value.length < 2) ||
-    inputMonth.value === ""
-  ) {
+btnConfirmar.addEventListener("click", function () {
+  if (inputMonth.value === "" && inputYear.value === "") {
+    addInputError(inputMonth, msgErrorDate);
+    addInputError(inputYear, msgErrorDate);
+    msgErrorDate.innerHTML = errorsMsgs.error1;
+  } else if (inputMonth.value === "") {
     addInputError(inputMonth, msgErrorDate);
     msgErrorDate.innerHTML = errorsMsgs.error1;
-  } else {
-    inputsDateValidate(inputMonth);
-    inputMonthValidate();
+  } else if (inputYear.value === "") {
+    addInputError(inputYear, msgErrorDate);
+    msgErrorDate.innerHTML = errorsMsgs.error1;
   }
-  inputsDateValidate(inputYear);
-  inputYearValidate();
 });
