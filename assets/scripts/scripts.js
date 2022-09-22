@@ -219,7 +219,11 @@ function onlyNumbersInputValidate(input) {
   }
 }
 
-btnConfirmar.addEventListener("click", function () {
+// Validando data após confirmar inserção do dado no input.
+function dateAfterConfirm() {
+  let mes = new Date().getMonth();
+  let ano = new Date().getFullYear().toString();
+
   if (inputMonth.value === "" && inputYear.value === "") {
     addInputError(inputMonth, msgErrorDate);
     addInputError(inputYear, msgErrorDate);
@@ -230,5 +234,14 @@ btnConfirmar.addEventListener("click", function () {
   } else if (inputYear.value === "") {
     addInputError(inputYear, msgErrorDate);
     msgErrorDate.innerHTML = errorsMsgs.error1;
+  } else if (inputMonth.value < mes && inputYear.value <= ano.substr(-2)) {
+    // verificando se está na validade após inserir mês e ano.
+    addInputError(inputMonth, msgErrorDate);
+    addInputError(inputYear, msgErrorDate);
+    msgErrorDate.innerHTML = errorsMsgs.error3;
   }
+}
+
+btnConfirmar.addEventListener("click", function () {
+  dateAfterConfirm();
 });
