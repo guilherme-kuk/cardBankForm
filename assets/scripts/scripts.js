@@ -122,9 +122,10 @@ const errorsMsgs = {
 
 // Adicionar 0 a frente no input mes e ano se inserir apenas 1 digito.
 
-function inputsDateValidate(input) {
+function inputsDateValidate(input, cardSession) {
   if (input.value.length < 2) {
     input.value = "0" + input.value;
+    cardSession.innerHTML = input.value;
   }
 }
 
@@ -242,6 +243,8 @@ function dateAfterConfirm() {
   }
 }
 
+// botão confirmar
 btnConfirmar.addEventListener("click", function () {
   dateAfterConfirm();
+  inputsDateValidate(inputMonth, cardMonth);
 });
