@@ -36,12 +36,14 @@ inputNumber.addEventListener("input", () => {
 });
 
 // card month
-inputMonth.addEventListener("input", (e) => {
+inputMonth.addEventListener("input", () => {
+  onlyNumbersInputValidate(inputMonth);
   inputMonthValidate();
 });
 
 //card year
 inputYear.addEventListener("input", () => {
+  onlyNumbersInputValidate(inputYear);
   inputYearValidate();
 });
 
@@ -91,7 +93,7 @@ function cardInfoDefault() {
     removeInputError(inputMonth, msgErrorDate);
   }
 
-  // Input Month Default
+  // Input Year Default
   if (inputYear.value === "") {
     cardYear.innerHTML = defaultValue.cardYearDefault;
     removeInputOk(inputYear);
@@ -197,10 +199,10 @@ function onlyNumbersInputValidate(input) {
   let values = input.value;
 
   //definindo regex
-  const pattern = /^[0-9]*$/;
+  const regex = /^[0-9]*$/;
 
   //validando regex e apresentando elemento diferente isNaN no input.
-  if (!pattern.test(values)) {
+  if (!regex.test(values)) {
     input.value = values
       .split("")
       .filter((element) => !isNaN(element))
