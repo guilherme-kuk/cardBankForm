@@ -20,6 +20,9 @@ let msgErrorNumber = document.querySelector(".msg_error_number");
 let msgErrorDate = document.querySelector(".msg_error_date");
 let msgErrorCvv = document.querySelector(".msg_error_cvv");
 
+let success = document.querySelector(".success");
+let form = document.querySelector(".form_side");
+
 //Event Listeners
 
 // cardholder name
@@ -298,6 +301,8 @@ btnConfirmar.addEventListener("click", function (e) {
   ) {
     e.preventDefault();
   } else {
-    console.log("ok");
+    e.preventDefault();
+    success.style.display = "unset";
+    form.classList.add("hidden");
   }
 });

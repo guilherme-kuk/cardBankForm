@@ -67,6 +67,14 @@
   align-items: center;
 }
 
+.success {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
 .card_form {
   width: 380px;
   display: flex;
