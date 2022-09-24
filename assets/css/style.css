@@ -90,6 +90,9 @@
   font-size: 1.1em;
   padding-left: 15px;
   margin-top: 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  color: #21092f;
 }
 .card_form div {
   margin-bottom: 25px;
@@ -97,14 +100,14 @@
 .card_form .input_ok {
   border: 1px solid transparent;
   border-radius: 8px;
-  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(90deg, #6448FE 28.75%, #600594 70.63%);
+  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(90deg, #6448fe 28.75%, #600594 70.63%);
   background-clip: padding-box, border-box;
 }
 .card_form .input_error {
-  border-color: #FF5252;
+  border-color: #ff5252;
 }
 .card_form .msg_error {
-  color: #FF5252;
+  color: #ff5252;
   margin-top: 5px;
   font-size: 0.75em;
   font-weight: 700;
@@ -150,4 +153,4 @@
 
 main {
   display: flex;
-}/*# sourceMappingURL=style.css.map */
+}
