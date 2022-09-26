@@ -1,0 +1,31 @@
+.success {
+  width: 100%;
+  margin-left: 130px;
+  background-color: $White;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontSpaceGrotesk;
+
+  & h1 {
+    font-weight: 700;
+    font-size: 1.2em;
+    letter-spacing: 0.12em;
+    color: $VeryDarkViolet;
+    text-transform: uppercase;
+    margin-top: 35px;
+  }
+
+  & p {
+    font-weight: 700;
+    font-size: 1em;
+    color: $DarkGrayishViolet;
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+}
+
+.hidden {
+  display: none;
+}

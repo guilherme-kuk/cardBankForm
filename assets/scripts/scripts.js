@@ -21,7 +21,11 @@ let msgErrorDate = document.querySelector(".msg_error_date");
 let msgErrorCvv = document.querySelector(".msg_error_cvv");
 
 let success = document.querySelector(".success");
-let form = document.querySelector(".form_side");
+let formSide = document.querySelector(".form_side");
+
+let btnContinuar = document.getElementById("btn-continue");
+
+let form = document.querySelector(".card_form");
 
 //Event Listeners
 
@@ -68,6 +72,7 @@ function cardInfoDefaultOrOK() {
   // Definindo Input Name Default
   if (inputName.value === "") {
     cardName.innerHTML = defaultValue.cardNameDefault;
+    removeInputOk(inputName);
   } else {
     addInputOk(inputName);
   }
@@ -302,7 +307,15 @@ btnConfirmar.addEventListener("click", function (e) {
     e.preventDefault();
   } else {
     e.preventDefault();
-    success.style.display = "unset";
-    form.classList.add("hidden");
+    formSide.classList.add("hidden");
+    success.classList.remove("hidden");
+    form.reset();
+    cardInfoDefaultOrOK();
   }
+});
+
+//botão continuar
+btnContinuar.addEventListener("click", () => {
+  success.classList.add("hidden");
+  formSide.classList.remove("hidden");
 });
