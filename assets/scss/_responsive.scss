@@ -1,0 +1,36 @@
+// Width
+$laptopsDesktopMin: 992px;
+$laptopsDesktopMax: 1340px;
+$tablet: 991px;
+$mobileTablet: 767px;
+$mobile: 480px;
+$mobileMini: 320px;
+
+@mixin laptopDesktops {
+  @media screen and (min-width: #{$laptopsDesktopMin}) and (max-width: #{$laptopsDesktopMax}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobileTablet {
+  @media screen and (max-width: #{$mobileTablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin mobileMini {
+  @media screen and (max-width: #{$mobileMini}) {
+    @content;
+  }
+}
