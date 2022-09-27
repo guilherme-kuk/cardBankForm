@@ -27,6 +27,8 @@ let btnContinuar = document.getElementById("btn-continue");
 
 let form = document.querySelector(".card_form");
 
+let loading = document.getElementById("loading");
+
 //Event Listeners
 
 // cardholder name
@@ -291,6 +293,23 @@ function cvvAfterConfirm() {
     msgErrorCvv.innerHTML = errorsMsgs.error1;
   }
 }
+
+// loading bar
+function loadingBar() {
+  loading.style.display = "block";
+  let width = 0;
+  let id = setInterval(frame, 10);
+
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      loading.style.width = `${width}%`;
+    }
+  }
+}
+
 // botão confirmar
 btnConfirmar.addEventListener("click", function (e) {
   nameAfterConfirm();
@@ -307,10 +326,13 @@ btnConfirmar.addEventListener("click", function (e) {
     e.preventDefault();
   } else {
     e.preventDefault();
-    formSide.classList.add("hidden");
-    success.classList.remove("hidden");
-    form.reset();
-    cardInfoDefaultOrOK();
+    loadingBar();
+    setTimeout(function () {
+      formSide.classList.add("hidden");
+      success.classList.remove("hidden");
+      form.reset();
+      cardInfoDefaultOrOK();
+    }, 1300);
   }
 });
 
@@ -318,4 +340,5 @@ btnConfirmar.addEventListener("click", function (e) {
 btnContinuar.addEventListener("click", () => {
   success.classList.add("hidden");
   formSide.classList.remove("hidden");
+  loading.style.display = "none";
 });

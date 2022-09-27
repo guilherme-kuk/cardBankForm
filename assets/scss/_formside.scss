@@ -6,4 +6,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  & #afterConfirm {
+    width: 100%;
+    height: 5px;
+    max-width: 380px;
+    background-color: transparent;
+    border-radius: 8px;
+
+    & #loading {
+      width: 0%;
+      height: 5px;
+      background-color: $Loading;
+      border-radius: 8px;
+      display: none;
+    }
+  }
 }
