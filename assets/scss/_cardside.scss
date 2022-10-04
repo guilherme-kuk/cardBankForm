@@ -55,7 +55,9 @@
           left: 25px;
         }
 
-        @include tablet {
+        @include beforeTablet2 {
+          top: 20px;
+
           .card_logo_img {
             width: 60px;
           }

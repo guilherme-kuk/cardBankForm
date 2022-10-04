@@ -16,6 +16,10 @@
     top: 100px;
   }
 
+  @include beforeTablet2 {
+    top: 80px;
+  }
+
   & .row {
     display: flex;
     width: 100%;
@@ -28,6 +32,10 @@
 
     @include beforeTablet1 {
       min-width: 250px;
+    }
+
+    @include beforeTablet2 {
+      min-width: 240px;
     }
 
     & .card_info_number {
@@ -46,6 +54,10 @@
 
         @include beforeTablet1 {
           font-size: 1.4em;
+        }
+
+        @include beforeTablet2 {
+          font-size: 1.2em;
         }
       }
     }

@@ -15,4 +15,9 @@
     top: 80px;
     left: 260px;
   }
+
+  @include beforeTablet2 {
+    top: 70px;
+    left: 230px;
+  }
 }
