@@ -1,11 +1,16 @@
 .form_side {
   width: 100%;
-  margin-left: 130px;
+  margin-left: 180px;
   background-color: $White;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include laptopDesktops {
+    margin-left: 200px;
+    padding-right: 50px;
+  }
 
   & #afterConfirm {
     width: 100%;

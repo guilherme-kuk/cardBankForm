@@ -1,19 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
 .card_side {
+  display: flex;
   width: 100%;
   max-width: 483px;
-  height: 900px;
+  height: 100vh;
+  max-height: 900px;
   background-image: url(../img/bg-main-desktop.png);
 }
 .card_side .cards {
+  display: flex;
   position: relative;
-  top: 185px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 160px;
   pointer-events: none;
   user-select: none;
 }
+@media screen and (max-width: 1440px) {
+  .card_side .cards {
+    left: 100px;
+  }
+}
+@media screen and (max-width: 1124px) {
+  .card_side .cards {
+    left: 60px;
+  }
+}
 .card_side .cards .card_front {
   position: relative;
-  left: 160px;
   margin-bottom: 40px;
 }
 .card_side .cards .card_front .card_logo {
@@ -21,9 +36,21 @@
   top: 30px;
   left: 35px;
 }
+@media screen and (max-width: 1124px) {
+  .card_side .cards .card_front .card_logo {
+    left: 25px;
+  }
+}
 .card_side .cards .card_back {
+  display: flex;
   position: relative;
-  left: 255px;
+  left: 100px;
+}
+@media screen and (max-width: 1124px) {
+  .card_side .cards .card_front_img,
+.card_side .cards .card_back_img {
+    width: 380px;
+  }
 }
 
 .card_info_front {
@@ -35,17 +62,33 @@
   left: 35px;
   user-select: none;
 }
+@media screen and (max-width: 1124px) {
+  .card_info_front {
+    top: 110px;
+    left: 25px;
+  }
+}
 .card_info_front .row {
   display: flex;
   width: 100%;
-  min-width: 351px;
+  min-width: 350px;
   justify-content: space-between;
+}
+@media screen and (max-width: 1124px) {
+  .card_info_front .row {
+    min-width: 300px;
+  }
 }
 .card_info_front .row .card_info_number {
   margin-bottom: 30px;
 }
 .card_info_front .row .card_info_number #number_info {
   font-size: 1.8em;
+}
+@media screen and (max-width: 1124px) {
+  .card_info_front .row .card_info_number #number_info {
+    font-size: 1.6em;
+  }
 }
 
 .card_info_back {
@@ -56,15 +99,27 @@
   top: 110px;
   left: 360px;
 }
+@media screen and (max-width: 1124px) {
+  .card_info_back {
+    top: 92px;
+    left: 300px;
+  }
+}
 
 .form_side {
   width: 100%;
-  margin-left: 130px;
+  margin-left: 180px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1124px) {
+  .form_side {
+    margin-left: 200px;
+    padding-right: 50px;
+  }
 }
 .form_side #afterConfirm {
   width: 100%;
@@ -148,9 +203,10 @@
 #btn,
 #btn-continue {
   width: 100%;
-  max-width: 380px;
+  width: 380px;
   height: 55px;
   background-color: #21092f;
+  border: none;
   border-radius: 8px;
   color: #dedddf;
   font-size: 1.1em;
@@ -165,13 +221,19 @@
 
 .success {
   width: 100%;
-  margin-left: 130px;
+  margin-left: 180px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Space Grotesk", sans-serif;
+}
+@media screen and (max-width: 1124px) {
+  .success {
+    margin-left: 200px;
+    padding-right: 50px;
+  }
 }
 .success h1 {
   font-weight: 700;

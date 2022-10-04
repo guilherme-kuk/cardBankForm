@@ -1,12 +1,17 @@
 .success {
   width: 100%;
-  margin-left: 130px;
+  margin-left: 180px;
   background-color: $White;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: $fontSpaceGrotesk;
+
+  @include laptopDesktops {
+    margin-left: 200px;
+    padding-right: 50px;
+  }
 
   & h1 {
     font-weight: 700;

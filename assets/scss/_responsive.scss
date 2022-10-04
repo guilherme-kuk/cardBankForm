@@ -1,13 +1,19 @@
 // Width
-$laptopsDesktopMin: 992px;
-$laptopsDesktopMax: 1340px;
+$laptopDesktopL: 1440px;
+$laptopDesktop: 1124px;
 $tablet: 991px;
 $mobileTablet: 767px;
 $mobile: 480px;
 $mobileMini: 320px;
 
+@mixin laptopDesktopsL {
+  @media screen and (max-width: #{$laptopDesktopL}) {
+    @content;
+  }
+}
+
 @mixin laptopDesktops {
-  @media screen and (min-width: #{$laptopsDesktopMin}) and (max-width: #{$laptopsDesktopMax}) {
+  @media screen and (max-width: #{$laptopDesktop}) {
     @content;
   }
 }

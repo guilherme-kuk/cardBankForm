@@ -7,17 +7,30 @@
   left: 35px;
   user-select: none;
 
+  @include laptopDesktops {
+    top: 110px;
+    left: 25px;
+  }
+
   & .row {
     display: flex;
     width: 100%;
-    min-width: 351px;
+    min-width: 350px;
     justify-content: space-between;
+
+    @include laptopDesktops {
+      min-width: 300px;
+    }
 
     & .card_info_number {
       margin-bottom: 30px;
 
       & #number_info {
         font-size: 1.8em;
+
+        @include laptopDesktops {
+          font-size: 1.6em;
+        }
       }
     }
   }

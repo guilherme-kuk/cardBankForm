@@ -5,4 +5,9 @@
   text-transform: uppercase;
   top: 110px;
   left: 360px;
+
+  @include laptopDesktops {
+    top: 92px;
+    left: 300px;
+  }
 }
