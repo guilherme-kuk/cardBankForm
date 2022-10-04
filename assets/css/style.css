@@ -63,6 +63,7 @@
 @media screen and (max-width: 850px) {
   .card_side .cards .card_front .card_logo {
     top: 20px;
+    left: 20px;
   }
   .card_side .cards .card_front .card_logo .card_logo_img {
     width: 60px;
@@ -120,6 +121,7 @@
 @media screen and (max-width: 850px) {
   .card_info_front {
     top: 80px;
+    left: 20px;
   }
 }
 .card_info_front .row {
@@ -135,12 +137,7 @@
 }
 @media screen and (max-width: 1000px) {
   .card_info_front .row {
-    min-width: 250px;
-  }
-}
-@media screen and (max-width: 850px) {
-  .card_info_front .row {
-    min-width: 240px;
+    min-width: 260px;
   }
 }
 .card_info_front .row .card_info_number {
@@ -167,6 +164,11 @@
 @media screen and (max-width: 850px) {
   .card_info_front .row .card_info_number #number_info {
     font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 850px) {
+  .card_info_front .row p {
+    font-size: 0.75em;
   }
 }
 
