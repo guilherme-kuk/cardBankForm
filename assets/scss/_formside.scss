@@ -12,6 +12,11 @@
     padding-right: 50px;
   }
 
+  @include beforeTablet1 {
+    margin-left: 110px;
+    padding-right: 30px;
+  }
+
   & #afterConfirm {
     width: 100%;
     height: 5px;

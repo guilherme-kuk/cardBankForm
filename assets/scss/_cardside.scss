@@ -7,6 +7,18 @@
   height: 100vh;
   max-height: 900px;
   background-image: url(../img/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include beforeTablet1 {
+    max-width: 363px;
+  }
+
+  @include beforeTablet2 {
+    max-width: 300px;
+    max-height: none;
+    min-height: 900px;
+  }
 
   & .cards {
     display: flex;
@@ -26,6 +38,10 @@
       left: 60px;
     }
 
+    @include beforeTablet2 {
+      left: 30px;
+    }
+
     & .card_front {
       position: relative;
       margin-bottom: 40px;
@@ -38,6 +54,12 @@
         @include laptopDesktops {
           left: 25px;
         }
+
+        @include tablet {
+          .card_logo_img {
+            width: 60px;
+          }
+        }
       }
     }
 
@@ -45,14 +67,30 @@
       display: flex;
       position: relative;
       left: 100px;
+
+      @include beforeTablet1 {
+        left: 50px;
+      }
     }
 
     @include laptopDesktops {
       .card_front_img,
       .card_back_img {
-        // width: 38vw;
-        // max-width: 447px;
         width: 380px;
+      }
+    }
+
+    @include beforeTablet1 {
+      .card_front_img,
+      .card_back_img {
+        width: 340px;
+      }
+    }
+
+    @include beforeTablet2 {
+      .card_front_img,
+      .card_back_img {
+        width: 300px;
       }
     }
   }

@@ -1,9 +1,10 @@
 // Width
 $laptopDesktopL: 1440px;
 $laptopDesktop: 1124px;
-$tablet: 991px;
-$mobileTablet: 767px;
-$mobile: 480px;
+$beforeTablet1: 1000px;
+$beforeTablet2: 850px;
+$tablet: 768px;
+$mobile: 600px;
 $mobileMini: 320px;
 
 @mixin laptopDesktopsL {
@@ -18,14 +19,20 @@ $mobileMini: 320px;
   }
 }
 
-@mixin tablet {
-  @media screen and (max-width: #{$tablet}) {
+@mixin beforeTablet1 {
+  @media screen and (max-width: #{$beforeTablet1}) {
     @content;
   }
 }
 
-@mixin mobileTablet {
-  @media screen and (max-width: #{$mobileTablet}) {
+@mixin beforeTablet2 {
+  @media screen and (max-width: #{$beforeTablet2}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet}) {
     @content;
   }
 }

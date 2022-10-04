@@ -10,4 +10,9 @@
     top: 92px;
     left: 300px;
   }
+
+  @include beforeTablet1 {
+    top: 80px;
+    left: 260px;
+  }
 }
