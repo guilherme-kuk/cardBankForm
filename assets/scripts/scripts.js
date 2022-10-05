@@ -165,9 +165,11 @@ function inputMonthValidate() {
 
   // caso seja digitado apenas 1 numero, ao sair do input é adicionado 0 à esquerda.
   inputMonth.addEventListener("blur", () => {
-    if (inputMonth.value.length < 2) {
+    if (inputMonth.value.length >= 1 && inputMonth.value.length < 2) {
       inputMonth.value = "0" + inputMonth.value;
       cardMonth.innerHTML = inputMonth.value;
+    } else if (inputMonth.value === "") {
+      inputMonth.value = "";
     }
   });
 }
