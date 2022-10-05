@@ -50,9 +50,10 @@
 
     @include mobile {
       max-width: 325px;
+      margin-bottom: 100px;
     }
 
-    @include mobile {
+    @include mobileMini {
       max-width: 300px;
     }
 

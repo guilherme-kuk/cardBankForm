@@ -26,10 +26,15 @@
 
   @include mobileMini {
     width: 300px;
-    margin-bottom: 50px;
   }
 
   &:hover {
     background: #4a0b6e;
+  }
+}
+
+#btn-continue {
+  @include mobileMini {
+    margin-bottom: 100px;
   }
 }

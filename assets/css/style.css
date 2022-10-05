@@ -380,9 +380,10 @@
 @media screen and (max-width: 625px) {
   .form_side #afterConfirm {
     max-width: 325px;
+    margin-bottom: 100px;
   }
 }
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 360px) {
   .form_side #afterConfirm {
     max-width: 300px;
   }
@@ -567,12 +568,17 @@
   #btn,
 #btn-continue {
     width: 300px;
-    margin-bottom: 50px;
   }
 }
 #btn:hover,
 #btn-continue:hover {
   background: #4a0b6e;
+}
+
+@media screen and (max-width: 360px) {
+  #btn-continue {
+    margin-bottom: 100px;
+  }
 }
 
 .success {
