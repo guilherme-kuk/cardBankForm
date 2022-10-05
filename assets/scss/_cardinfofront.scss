@@ -79,7 +79,13 @@
       }
     }
 
-    @include beforeTablet2 {
+    @include laptopDesktops {
+      p {
+        font-size: 0.9em;
+      }
+    }
+
+    @include beforeTablet1 {
       p {
         font-size: 0.75em;
       }

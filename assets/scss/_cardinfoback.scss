@@ -12,26 +12,25 @@
   }
 
   @include beforeTablet1 {
-    top: 80px;
-    left: 260px;
+    top: 82px;
+    left: 270px;
+    p {
+      font-size: 0.9em;
+    }
   }
 
   @include beforeTablet2 {
-    top: 70px;
+    top: 72px;
     left: 230px;
   }
 
   @include mobile {
-    top: 65px;
-    left: 215px;
+    top: 68px;
+    left: 220px;
   }
 
   @include mobileMini {
     top: 60px;
     left: 190px;
-
-    p {
-      font-size: 0.9em;
-    }
   }
 }
