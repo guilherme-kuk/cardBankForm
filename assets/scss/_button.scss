@@ -16,6 +16,10 @@
     width: 320px;
   }
 
+  @include tablet {
+    width: 250px;
+  }
+
   &:hover {
     background: #4a0b6e;
   }

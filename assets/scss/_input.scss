@@ -7,6 +7,10 @@
     width: 320px;
   }
 
+  @include tablet {
+    width: 250px;
+  }
+
   & label {
     text-transform: uppercase;
     font-size: 0.8em;
@@ -29,6 +33,10 @@
     font-family: $fontSpaceGrotesk;
     font-weight: 700;
     color: $VeryDarkViolet;
+
+    @include tablet {
+      font-size: 1em;
+    }
   }
 
   & div {
@@ -65,8 +73,18 @@
         justify-content: space-between;
         margin-bottom: 0;
 
+        @include tablet {
+          justify-content: start;
+          margin-right: 10px;
+        }
+
         & input {
           width: 80px;
+
+          @include tablet {
+            width: 70px;
+            margin-right: 5px;
+          }
         }
       }
     }
@@ -76,6 +94,10 @@
 
       @include beforeTablet1 {
         width: 140px;
+      }
+
+      @include tablet {
+        width: 100px;
       }
     }
   }

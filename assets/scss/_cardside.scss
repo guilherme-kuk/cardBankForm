@@ -42,6 +42,10 @@
       left: 30px;
     }
 
+    @include tablet {
+      left: 20px;
+    }
+
     & .card_front {
       position: relative;
       margin-bottom: 40px;
@@ -73,6 +77,10 @@
 
       @include beforeTablet1 {
         left: 50px;
+      }
+
+      @include tablet {
+        left: 0;
       }
     }
 
