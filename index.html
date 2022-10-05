@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="shortcut icon" href="./public/favicon.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CardBank Form</title>
+  <title>Credit Card</title>
 
   <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -62,7 +62,8 @@
       <form action="#" class="card_form">
         <div class="cardholder_name">
           <label for="name">nome impresso no cartão</label>
-          <input type="text" name="name" id="name" placeholder="ex: Guilherme Kuk" maxlength="22" required>
+          <input type="text" name="name" id="name" placeholder="ex: Guilherme Kuk" maxlength="22" autocomplete="off"
+            required>
           <span class="msg_error_name"></span>
         </div>
 
