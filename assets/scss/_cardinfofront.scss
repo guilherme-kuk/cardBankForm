@@ -21,6 +21,10 @@
     left: 20px;
   }
 
+  @include mobileMini {
+    top: 70px;
+  }
+
   & .row {
     display: flex;
     width: 100%;
@@ -35,11 +39,23 @@
       min-width: 260px;
     }
 
+    @include mobile {
+      min-width: 250px;
+    }
+
+    @include mobileMini {
+      min-width: 220px;
+    }
+
     & .card_info_number {
       margin-bottom: 30px;
 
       @include beforeTablet1 {
         margin-bottom: 25px;
+      }
+
+      @include mobileMini {
+        margin-bottom: 20px;
       }
 
       & #number_info {
@@ -56,12 +72,28 @@
         @include beforeTablet2 {
           font-size: 1.2em;
         }
+
+        @include mobileMini {
+          font-size: 1em;
+        }
       }
     }
 
     @include beforeTablet2 {
       p {
         font-size: 0.75em;
+      }
+    }
+
+    @include mobile {
+      p {
+        font-size: 0.7em;
+      }
+    }
+
+    @include mobileMini {
+      p {
+        font-size: 0.6em;
       }
     }
   }

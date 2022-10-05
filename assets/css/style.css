@@ -21,6 +21,15 @@
     min-height: 900px;
   }
 }
+@media screen and (max-width: 625px) {
+  .card_side {
+    flex-direction: column;
+    height: 240px;
+    max-width: unset;
+    min-height: unset;
+    background-image: url(../img/bg-main-mobile.png);
+  }
+}
 .card_side .cards {
   display: flex;
   position: relative;
@@ -51,9 +60,27 @@
     left: 20px;
   }
 }
+@media screen and (max-width: 625px) {
+  .card_side .cards {
+    left: 0;
+  }
+}
 .card_side .cards .card_front {
   position: relative;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 625px) {
+  .card_side .cards .card_front {
+    top: 130px;
+    left: -25px;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card_side .cards .card_front {
+    top: 140px;
+    left: -20px;
+  }
 }
 .card_side .cards .card_front .card_logo {
   position: absolute;
@@ -74,6 +101,11 @@
     width: 60px;
   }
 }
+@media screen and (max-width: 360px) {
+  .card_side .cards .card_front .card_logo .card_logo_img {
+    width: 50px;
+  }
+}
 .card_side .cards .card_back {
   display: flex;
   position: relative;
@@ -87,6 +119,18 @@
 @media screen and (max-width: 768px) {
   .card_side .cards .card_back {
     left: 0;
+  }
+}
+@media screen and (max-width: 625px) {
+  .card_side .cards .card_back {
+    top: -170px;
+    left: 25px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card_side .cards .card_back {
+    top: -140px;
+    left: 20px;
   }
 }
 @media screen and (max-width: 1124px) {
@@ -105,6 +149,18 @@
   .card_side .cards .card_front_img,
 .card_side .cards .card_back_img {
     width: 300px;
+  }
+}
+@media screen and (max-width: 625px) {
+  .card_side .cards .card_front_img,
+.card_side .cards .card_back_img {
+    width: 285px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card_side .cards .card_front_img,
+.card_side .cards .card_back_img {
+    width: 255px;
   }
 }
 
@@ -134,6 +190,11 @@
     left: 20px;
   }
 }
+@media screen and (max-width: 360px) {
+  .card_info_front {
+    top: 70px;
+  }
+}
 .card_info_front .row {
   display: flex;
   width: 100%;
@@ -150,12 +211,27 @@
     min-width: 260px;
   }
 }
+@media screen and (max-width: 625px) {
+  .card_info_front .row {
+    min-width: 250px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card_info_front .row {
+    min-width: 220px;
+  }
+}
 .card_info_front .row .card_info_number {
   margin-bottom: 30px;
 }
 @media screen and (max-width: 1000px) {
   .card_info_front .row .card_info_number {
     margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card_info_front .row .card_info_number {
+    margin-bottom: 20px;
   }
 }
 .card_info_front .row .card_info_number #number_info {
@@ -176,9 +252,24 @@
     font-size: 1.2em;
   }
 }
+@media screen and (max-width: 360px) {
+  .card_info_front .row .card_info_number #number_info {
+    font-size: 1em;
+  }
+}
 @media screen and (max-width: 850px) {
   .card_info_front .row p {
     font-size: 0.75em;
+  }
+}
+@media screen and (max-width: 625px) {
+  .card_info_front .row p {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card_info_front .row p {
+    font-size: 0.6em;
   }
 }
 
@@ -208,6 +299,21 @@
     left: 230px;
   }
 }
+@media screen and (max-width: 625px) {
+  .card_info_back {
+    top: 65px;
+    left: 215px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card_info_back {
+    top: 60px;
+    left: 190px;
+  }
+  .card_info_back p {
+    font-size: 0.9em;
+  }
+}
 
 .form_side {
   width: 100%;
@@ -235,6 +341,20 @@
     margin-left: 30px;
   }
 }
+@media screen and (max-width: 625px) {
+  .form_side {
+    max-width: 325px;
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .form_side {
+    max-width: 300px;
+    margin-bottom: 50px;
+  }
+}
 .form_side #afterConfirm {
   width: 100%;
   height: 5px;
@@ -250,6 +370,16 @@
 @media screen and (max-width: 768px) {
   .form_side #afterConfirm {
     max-width: 250px;
+  }
+}
+@media screen and (max-width: 625px) {
+  .form_side #afterConfirm {
+    max-width: 325px;
+  }
+}
+@media screen and (max-width: 625px) {
+  .form_side #afterConfirm {
+    max-width: 300px;
   }
 }
 .form_side #afterConfirm #loading {
@@ -273,6 +403,16 @@
 @media screen and (max-width: 768px) {
   .card_form {
     width: 250px;
+  }
+}
+@media screen and (max-width: 625px) {
+  .card_form {
+    width: 325px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card_form {
+    width: 300px;
   }
 }
 .card_form label {
@@ -300,6 +440,11 @@
 @media screen and (max-width: 768px) {
   .card_form input {
     font-size: 1em;
+  }
+}
+@media screen and (max-width: 625px) {
+  .card_form input {
+    font-size: 0.9em;
   }
 }
 .card_form div {
@@ -334,8 +479,12 @@
 }
 @media screen and (max-width: 768px) {
   .card_form .card_date_cvv .input_date div {
-    justify-content: start;
     margin-right: 10px;
+  }
+}
+@media screen and (max-width: 625px) {
+  .card_form .card_date_cvv .input_date div {
+    margin-right: 0;
   }
 }
 .card_form .card_date_cvv .input_date div input {
@@ -345,6 +494,12 @@
   .card_form .card_date_cvv .input_date div input {
     width: 70px;
     margin-right: 5px;
+  }
+}
+@media screen and (max-width: 625px) {
+  .card_form .card_date_cvv .input_date div input {
+    width: 80px;
+    margin-right: 0;
   }
 }
 .card_form .card_date_cvv .input_cvv {
@@ -358,6 +513,16 @@
 @media screen and (max-width: 768px) {
   .card_form .card_date_cvv .input_cvv {
     width: 100px;
+  }
+}
+@media screen and (max-width: 625px) {
+  .card_form .card_date_cvv .input_cvv {
+    width: 140px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .card_form .card_date_cvv .input_cvv {
+    width: 120px;
   }
 }
 
@@ -387,6 +552,19 @@
     width: 250px;
   }
 }
+@media screen and (max-width: 625px) {
+  #btn,
+#btn-continue {
+    width: 325px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #btn,
+#btn-continue {
+    width: 300px;
+    margin-bottom: 50px;
+  }
+}
 #btn:hover,
 #btn-continue:hover {
   background: #4a0b6e;
@@ -408,14 +586,22 @@
     padding-right: 50px;
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
   .success {
-    margin-left: 120px;
+    margin-left: 110px;
+    padding-right: 30px;
   }
 }
 @media screen and (max-width: 768px) {
   .success {
     margin-left: 30px;
+  }
+}
+@media screen and (max-width: 625px) {
+  .success {
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: 90px;
   }
 }
 .success h1 {
@@ -448,4 +634,10 @@
 
 main {
   display: flex;
+}
+@media screen and (max-width: 625px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
 }

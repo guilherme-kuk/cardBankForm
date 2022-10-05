@@ -23,4 +23,9 @@
 
 main {
   display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
 }

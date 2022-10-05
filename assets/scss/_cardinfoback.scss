@@ -20,4 +20,18 @@
     top: 70px;
     left: 230px;
   }
+
+  @include mobile {
+    top: 65px;
+    left: 215px;
+  }
+
+  @include mobileMini {
+    top: 60px;
+    left: 190px;
+
+    p {
+      font-size: 0.9em;
+    }
+  }
 }

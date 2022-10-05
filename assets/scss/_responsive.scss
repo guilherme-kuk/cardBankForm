@@ -5,7 +5,7 @@ $beforeTablet1: 1000px;
 $beforeTablet2: 850px;
 $tablet: 768px;
 $mobile: 625px;
-$mobileMini: 320px;
+$mobileMini: 360px;
 
 @mixin laptopDesktopsL {
   @media screen and (max-width: #{$laptopDesktopL}) {

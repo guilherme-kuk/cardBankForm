@@ -20,6 +20,14 @@
     min-height: 900px;
   }
 
+  @include mobile {
+    flex-direction: column;
+    height: 240px;
+    max-width: unset;
+    min-height: unset;
+    background-image: url(../img/bg-main-mobile.png);
+  }
+
   & .cards {
     display: flex;
     position: relative;
@@ -46,9 +54,24 @@
       left: 20px;
     }
 
+    @include mobile {
+      left: 0;
+    }
+
     & .card_front {
       position: relative;
       margin-bottom: 40px;
+
+      @include mobile {
+        top: 130px;
+        left: -25px;
+        z-index: 1;
+      }
+
+      @include mobileMini {
+        top: 140px;
+        left: -20px;
+      }
 
       & .card_logo {
         position: absolute;
@@ -67,6 +90,12 @@
             width: 60px;
           }
         }
+
+        @include mobileMini {
+          .card_logo_img {
+            width: 50px;
+          }
+        }
       }
     }
 
@@ -81,6 +110,16 @@
 
       @include tablet {
         left: 0;
+      }
+
+      @include mobile {
+        top: -170px;
+        left: 25px;
+      }
+
+      @include mobileMini {
+        top: -140px;
+        left: 20px;
       }
     }
 
@@ -102,6 +141,20 @@
       .card_front_img,
       .card_back_img {
         width: 300px;
+      }
+    }
+
+    @include mobile {
+      .card_front_img,
+      .card_back_img {
+        width: 285px;
+      }
+    }
+
+    @include mobileMini {
+      .card_front_img,
+      .card_back_img {
+        width: 255px;
       }
     }
   }

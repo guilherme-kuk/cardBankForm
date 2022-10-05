@@ -21,6 +21,18 @@
     margin-left: 30px;
   }
 
+  @include mobile {
+    max-width: 325px;
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: 90px;
+  }
+
+  @include mobileMini {
+    max-width: 300px;
+    margin-bottom: 50px;
+  }
+
   & #afterConfirm {
     width: 100%;
     height: 5px;
@@ -34,6 +46,14 @@
 
     @include tablet {
       max-width: 250px;
+    }
+
+    @include mobile {
+      max-width: 325px;
+    }
+
+    @include mobile {
+      max-width: 300px;
     }
 
     & #loading {
