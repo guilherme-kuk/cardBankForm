@@ -228,7 +228,7 @@ function onlyNumbersInputValidate(input) {
   let values = input.value;
 
   //definindo regex
-  const regex = /[0-9]/;
+  const regex = /^[0-9]$/;
 
   //validando regex e apresentando elemento diferente isNaN no input.
   if (!regex.test(values)) {
