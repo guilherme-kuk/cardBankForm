@@ -162,17 +162,17 @@ function inputMonthValidate() {
     removeInputError(inputMonth, msgErrorDate);
     removeInputError(inputYear, msgErrorDate);
   }
-
-  // caso seja digitado apenas 1 numero, ao sair do input é adicionado 0 à esquerda.
-  inputMonth.addEventListener("blur", () => {
-    if (inputMonth.value.length >= 1 && inputMonth.value.length < 2) {
-      inputMonth.value = "0" + inputMonth.value;
-      cardMonth.innerHTML = inputMonth.value;
-    } else if (inputMonth.value === "") {
-      inputMonth.value = "";
-    }
-  });
 }
+
+// caso seja digitado apenas 1 numero, ao sair do input é adicionado 0 à esquerda.
+inputMonth.addEventListener("blur", () => {
+  if (inputMonth.value.length >= 1 && inputMonth.value.length < 2) {
+    inputMonth.value = "0" + inputMonth.value;
+    cardMonth.innerHTML = inputMonth.value;
+  } else if (inputMonth.value === "") {
+    inputMonth.value = "";
+  }
+});
 
 // validar input Year
 function inputYearValidate() {
@@ -287,6 +287,11 @@ function dateAfterConfirm() {
     msgErrorDate.innerHTML = errorsMsgs.error3;
   }
 }
+
+// remover borda de erro do input mês se der fora de validade após confirmar.
+inputYear.addEventListener("focus", () => {
+  removeInputError(inputMonth, msgErrorDate);
+});
 
 // validar input CVV após clicar no botão confirmar
 function cvvAfterConfirm() {
